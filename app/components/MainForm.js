@@ -81,9 +81,8 @@ const MainForm = ({
     fetchRepresentatives(
       "GET",
       backendURLBase,
-      endpoints.teGetRepresentativesPerStates,
+      endpoints.toGetAllRepresentatives,
       clientId,
-      `&state=${dataUser.state}`,
       setMp,
       setShowLoadSpin,
       setShowList,
