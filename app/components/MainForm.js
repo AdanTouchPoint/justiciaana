@@ -83,6 +83,7 @@ const MainForm = ({
       backendURLBase,
       endpoints.toGetAllRepresentatives,
       clientId,
+      `&state=${dataUser.state}`,
       setMp,
       setShowLoadSpin,
       setShowList,
