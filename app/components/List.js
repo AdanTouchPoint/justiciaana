@@ -5,7 +5,6 @@ import Modal from 'react-bootstrap/Modal';
 const List = ({setAllDataIn, mp, dataUser,  setEmailData,  setShowFindForm, setShowEmailForm, tweet}) => {
     const [checklistStates, setChecklistStates] = useState(Array(mp.length).fill(true));
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = async() => setShow(true);
     const toggleChecklist = (index) => {
@@ -17,7 +16,7 @@ const List = ({setAllDataIn, mp, dataUser,  setEmailData,  setShowFindForm, setS
     const click = async() => {
         
       const selectedMps = await mp.filter((mp, index) => checklistStates[index]);
-      const emails = await selectedMps.map((mp) => mp.email);
+      const emails = await selectedMps.map((mp) => mp.contact);
       console.log(emails, 'allDataIn')
       if(checklistStates.every(state => !state)){
         handleShow();
