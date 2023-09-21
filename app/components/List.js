@@ -52,19 +52,19 @@ const List = ({setAllDataIn, mp, dataUser,  setEmailData,  setShowFindForm, setS
             <div className={'buttons'}>
                 <div>
                     <Button id="representativeList-button" className='list-button' size={'md'} variant={'dark'} onClick={click}>
-                    Proceed to Email
+                    Enviar email
                     </Button>
                 </div>
             </div>
         </div>
         <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Advice</Modal.Title>
+          <Modal.Title>Aviso</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Please check the box of at least one representative</Modal.Body>
+        <Modal.Body>Por favor seleccione almenos un representante</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Cerrar
           </Button>
         </Modal.Footer>
       </Modal>
