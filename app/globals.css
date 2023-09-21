@@ -151,6 +151,8 @@ display: flex;
 .list-button{
   max-width: 150px;
   width: 100% ;
+  justify-content: center;
+  margin:15px;
 }
 .list-notweeter-text{
   text-align: center;

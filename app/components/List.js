@@ -13,8 +13,7 @@ const List = ({setAllDataIn, mp, dataUser,  setEmailData,  setShowFindForm, setS
       setChecklistStates(newChecklistStates);
     };
   
-    const click = async() => {
-        
+    const click = async() => {   
       const selectedMps = await mp.filter((mp, index) => checklistStates[index]);
       const emails = await selectedMps.map((mp) => mp.contact);
       console.log(emails, 'allDataIn')
@@ -28,6 +27,12 @@ const List = ({setAllDataIn, mp, dataUser,  setEmailData,  setShowFindForm, setS
         setShowFindForm(true);
       }
     };
+    function urlEncode(text) {
+      var encodedText = encodeURIComponent(text);
+      return encodedText;
+    }
+    const decoder = urlEncode(tweet);
+    const tweetText = `.${mp.twitter} ${decoder}`;
     return (
 
         <>
@@ -42,9 +47,13 @@ const List = ({setAllDataIn, mp, dataUser,  setEmailData,  setShowFindForm, setS
                     checked={checklistStates[index]}
                     onChange={() => toggleChecklist(index)}
                     />
-                    <h5>{mp.name}</h5>
+                    <h5>{mp.name}</h5>  
                 </label>
                 <h7>{mp.govt_type}</h7> -  Estado de  <h7>{mp.state}</h7> 
+                {mp.twitter ? <Button className="list-button"
+              size={"sm"}
+              variant={"dark"} href={`https://twitter.com/intent/tweet?text=.${mp.twitter} ${decoder}`}
+              target={"blank"}> tweet</Button> : null}
                 </div>                       
             ))}
         </div>
