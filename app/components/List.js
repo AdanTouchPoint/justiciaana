@@ -33,8 +33,10 @@ const List = ({setAllDataIn, mp, dataUser,  setEmailData,  setShowFindForm, setS
 
         <>
         <div className={'buttonsContainer'}>
+          
             {mp.map((mp, index) => (
-                <label key={index} className='list-mp-row' >
+             <div   key={index}>
+                <label className='list-mp-row' >
                     <input
                     id="representativeList-checkbox"
                     type='checkbox'
@@ -43,6 +45,8 @@ const List = ({setAllDataIn, mp, dataUser,  setEmailData,  setShowFindForm, setS
                     />
                     <h5>{mp.name}</h5>
                 </label>
+                <h7>{mp.govt_type}</h7> -  Estado de  <h7>{mp.state}</h7> 
+                </div>                       
             ))}
         </div>
         <div className='btn-container-checklist'>
