@@ -166,14 +166,14 @@ const EmailForm = ({leads, setLeads, setShowThankYou, setShowFindForm, dataUser,
                     className={'button-email-form'}
                     variant={'dark'}
                     onClick={send}>
-                    {emailData.sendButton? 'please enter a send-button text on your dashboard':'Send'}
+                    {emailData.sendButton? 'please enter a send-button text on your dashboard':'Enviar'}
                 </Button>
                 <Button
                 id="backButton-emailform"
                     className={'button-email-form'}
                     variant={'dark'}
                     onClick={back}>
-                    {emailData.backButton? 'please enter a back-button text on your dashboard':'Go Back'}
+                    {emailData.backButton? 'please enter a back-button text on your dashboard':'Regresar'}
                 </Button>
             </div>
         </div>
