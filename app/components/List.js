@@ -49,7 +49,7 @@ const List = ({setAllDataIn, mp, dataUser,  setEmailData,  setShowFindForm, setS
                     />
                     <h5>{mp.name}</h5>  
                 </label>
-                <h7>{mp.govt_type}</h7> -  Estado de  <h7>{mp.state}</h7> 
+                <h7>{mp.govt_type}</h7> - <h7>{mp.state}</h7> 
                 {mp.twitter ? <Button className="list-button"
               size={"sm"}
               variant={"dark"} href={`https://twitter.com/intent/tweet?text=.${mp.twitter} ${decoder}`}
